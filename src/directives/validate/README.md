@@ -6,9 +6,9 @@
 
 ```javascript
 import Vue from 'vue'
-import VeeValidator from 'vee-validate'
+import Validator from 'v-validate'
 
-Vue.use(VeeValidator)
+Vue.use(Validator)
 ```
 
 ```html

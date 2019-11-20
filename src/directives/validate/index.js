@@ -41,16 +41,6 @@ export default {
                 }
               }
             },
-            validateOne() {
-              for (const key of validator.validates.keys()) {
-                const errors = validator.validate(key, context[key]);
-                if (errors.length) {
-                  context.$set(context.errorBag, key, errors);
-                } else {
-                  context.$delete(context.errorBag, key);
-                }
-              }
-            },
           };
         },
       },

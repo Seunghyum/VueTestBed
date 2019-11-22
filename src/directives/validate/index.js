@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
-import validate from './directive';
-import validator from './validator';
+import validate from './src/directive';
+import validator from './src/validator';
 
 export default {
   install(Vue) {

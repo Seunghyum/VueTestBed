@@ -5,7 +5,7 @@
       <p v-if="$errors.has('name')">{{ $errors.message('name') }}</p>
       <br>
       <br>
-      <input type="text" name="email" v-model="email" v-validate="'email|4,20'">
+      <input type="text" name="email" v-model="email" v-validate="'email|2,4'">
       <p v-if="$errors.has('email')">{{ $errors.message('email') }}</p>
       <br>
       <br>

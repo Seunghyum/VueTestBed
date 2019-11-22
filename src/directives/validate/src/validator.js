@@ -4,7 +4,7 @@
 /* eslint-disable consistent-return */
 const validateFns = {
   link(key, val) {
-    const regExp = new RegExp(/^(http(s)?|ftp|tel|mailto|\/)(:\/\/)?/);
+    const regExp = new RegExp('^(http(s)?|ftp|tel|mailto|\/)(:\/\/)?');
     if (!regExp.test(val)) {
       return false;
     }
@@ -13,7 +13,7 @@ const validateFns = {
   email(key, val, option) {
     if (!option) return 'option(길이)이 설정되지 않았습니다.';
     if (option.length < 2) return 'option(길이) 값은 2개 여야 합니다.';
-    const regExp = new RegExp(/[-\d\S.+_]+@[-\d\S.+_]+\.[\S]{option[0],option[1]}/);
+    const regExp = new RegExp(`[-\\d\\S.+_]+@[-\\d\\S.+_]+\\.[\\S]{${Number(option[0])},${Number(option[1])}}`);
     if (!regExp.test(val)) {
       return false;
     }
@@ -22,7 +22,7 @@ const validateFns = {
   password(key, val, option) {
     if (!option) return 'option(길이)이 설정되지 않았습니다.';
     if (option.length < 2) return 'option(길이) 값은 2개 여야 합니다.';
-    const regExp = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&\(\)])[A-Za-z\d$@$!%*#?&\(\)]{option[0],option[1]}$/i; // IE RegExp 객체 이슈로 형태 변경
+    const regExp = new RegExp(`^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&\\(\\)])[A-Za-z\\d$@$!%*#?&\\(\\)]{${Number(option[0])},${Number(option[1])}}$/i`); // IE RegExp 객체 이슈로 형태 변경
     if (!regExp.test(val)) {
       return false;
     }
@@ -31,7 +31,7 @@ const validateFns = {
   name(key, val, option) {
     if (!option) return 'option(길이)이 설정되지 않았습니다.';
     if (option.length < 2) return 'option(길이) 값은 2개 여야 합니다.';
-    const regExp = new RegExp(/^([^\<\>ㄱ-ㅣ]|[\w]){option[0],option[1]}$/);
+    const regExp = new RegExp(`^([^\\<\\>ㄱ-ㅣ]|[\\w]){${Number(option[0])},${Number(option[1])}}$`);
     if (!regExp.test(val)) {
       return false;
     }
@@ -40,7 +40,7 @@ const validateFns = {
   id(key, val, option) {
     if (!option) return 'option(길이)이 설정되지 않았습니다.';
     if (option.length < 2) return 'option(길이) 값은 2개 여야 합니다.';
-    const regExp = new RegExp(/^([-_a-z\d]){option[0],option[1]}$/);
+    const regExp = new RegExp(`^([-_a-z\\d]){{Number(option[0])},${Number(option[1])}}$`);
     if (!regExp.test(val)) {
       return false;
     }

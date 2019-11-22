@@ -2,11 +2,11 @@
 
 : 유효성 검사(Validate) 코드를 한 곳에서 관리하기 위한 모듈
 
-## Use Case
+## Usage
 
 ```javascript
 import Vue from 'vue'
-import Validator from 'v-validate'
+import Validator from '@seunghyum/v-validate'
 
 Vue.use(Validator)
 ```

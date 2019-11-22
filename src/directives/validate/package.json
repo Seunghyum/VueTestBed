@@ -1,12 +1,12 @@
 {
   "name": "@seunghyum/v-validate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simpe vue form validate",
   "main": "index.js",
   "files": [
-    "./directive.js",
-    "./validator.js",
-    "./index.js"
+    "directive.js",
+    "validator.js",
+    "index.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

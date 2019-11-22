@@ -13,7 +13,7 @@ const validateFns = {
   email(key, val, option) {
     if (!option) return 'option(길이)이 설정되지 않았습니다.';
     if (option.length < 2) return 'option(길이) 값은 2개 여야 합니다.';
-    const regExp = new RegExp(`[-\\d\\S.+_]+@[-\\d\\S.+_]+\\.[\\S]{${Number(option[0])},${Number(option[1])}}`);
+    const regExp = new RegExp('[-\\d\\S.+_]+@[-\\d\\S.+_]+\\.[\\S]{2,4}');
     if (!regExp.test(val)) {
       return false;
     }

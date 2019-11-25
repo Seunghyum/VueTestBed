@@ -1,10 +1,10 @@
 /* eslint-disable no-restricted-syntax */
-import validate from './src/directive';
+import directive from './src/directive';
 import validator from './src/validator';
 
 export default {
   install(Vue) {
-    Vue.directive('validate', validate.validate);
+    Vue.directive('validate', directive.validate);
 
     Vue.mixin({
       data() {
